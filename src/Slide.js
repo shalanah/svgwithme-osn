@@ -20,7 +20,17 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
   switch (layout) {
     case "center":
       return (
-        <Section ref={ref} id={id} onClick={onClick}>
+        <Section
+          ref={ref}
+          id={id}
+          onClick={onClick}
+          style={{
+            background: `url(/imgs/svg-you-and-me-bg.svg)`,
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="layout-center">
             <a href={`#${id}`} style={{ textDecoration: "none" }}>
               <h1>{title}</h1>
@@ -106,7 +116,17 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
       );
     default:
       return (
-        <Section ref={ref} onClick={onClick} id={id}>
+        <Section
+          ref={ref}
+          onClick={onClick}
+          id={id}
+          style={{
+            background: `url(/imgs/svg-you-and-me-bg.svg)`,
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+          }}
+        >
           {content}
         </Section>
       );

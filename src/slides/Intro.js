@@ -1,5 +1,3 @@
-import IntroLowerRight from "../svgs/IntroLowerRight";
-import IntroUpperRight from "../svgs/IntroUpperRight";
 import IntroStates from "../svgs/IntroStates";
 import { colors } from "../colors";
 import styled from "styled-components";
@@ -56,22 +54,6 @@ const Container = styled.div`
 const Intro = () => {
   return (
     <Container className="pos-full">
-      <IntroLowerRight
-        style={{
-          position: "absolute",
-          right: "-3%",
-          bottom: "-2%",
-          width: "28%",
-        }}
-      />
-      <IntroUpperRight
-        style={{
-          position: "absolute",
-          right: "-3%",
-          top: "-2%",
-          width: "25%",
-        }}
-      />
       <IntroStates
         style={{
           position: "absolute",
