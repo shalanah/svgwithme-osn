@@ -1,8 +1,7 @@
 import React from "react";
 import { colors } from "./colors";
+import { pickRandom, lerp } from "./lib";
 
-const lerp = (v0, v1, t) => v0 * (1 - t) + v1 * t;
-const pickRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const getCircle = () => {
   return {
     type: "circle",

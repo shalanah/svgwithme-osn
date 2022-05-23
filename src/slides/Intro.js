@@ -177,8 +177,8 @@ const Intro = () => {
               >
                 British panel shows
               </a>{" "}
-              with my husband, hanging out with our cat, speaking German badly
-              (watching Dark or Babylon Berlin), and{" "}
+              with my husband, speaking German badly (watching Dark or Babylon
+              Berlin), and{" "}
               <a
                 href="https://www.youtube.com/watch?v=jXegEec5dC8&t=1973s"
                 target="_blank"

@@ -8,7 +8,6 @@ const Bg = styled.div`
   background: #fff;
   z-index: -1;
 `;
-
 const Container = styled.div`
   z-index: 1;
   position: fixed;
@@ -30,8 +29,7 @@ const Container = styled.div`
     background: #000;
   }
 `;
-
-const Arrow = styled.button`
+const ContainerArrow = styled.button`
   width: 30px;
   height: 30px;
   background: none;
@@ -61,52 +59,45 @@ const Text = styled.input`
   width: calc(100% - 8px);
 `;
 
+const min = 1;
+
 const Pagination = ({ max }) => {
-  const [section, setSection, setBtnScroll, onInput] = usePagination(max);
+  const [section, onInput, btnScroll, onPrev, onNext] = usePagination(min, max);
+  const iconShared = {
+    width: "50%",
+    margin: "auto",
+    overflow: "visible",
+  };
   return (
     <Container>
       <Bg className={"pos-full"} />
-      <Arrow
+      <ContainerArrow
         style={{ marginTop: 7 }}
-        disabled={section === 0}
-        onClick={() => {
-          setBtnScroll(true);
-          setSection((v) => Math.max(v - 1, 0));
-        }}
+        disabled={section === min || btnScroll}
+        onClick={onPrev}
       >
         <IconArrow
           style={{
             transform: "scaleY(-1)",
-            width: "50%",
-            margin: "auto",
-            overflow: "visible",
+            ...iconShared,
           }}
         />
-      </Arrow>
+      </ContainerArrow>
       <Text
-        key={section + 1}
-        defaultValue={section + 1}
+        key={section}
+        defaultValue={section}
         onKeyUp={(e) => {
           if (e.key === "Enter") onInput(e);
         }}
         onBlur={onInput}
       />
-      <Arrow
-        disabled={section === max}
+      <ContainerArrow
+        disabled={section === max || btnScroll}
         style={{ marginBottom: 7 }}
-        onClick={() => {
-          setBtnScroll(true);
-          setSection((v) => Math.min(v + 1, max));
-        }}
+        onClick={onNext}
       >
-        <IconArrow
-          style={{
-            width: "50%",
-            margin: "auto",
-            overflow: "visible",
-          }}
-        />
-      </Arrow>
+        <IconArrow style={iconShared} />
+      </ContainerArrow>
     </Container>
   );
 };

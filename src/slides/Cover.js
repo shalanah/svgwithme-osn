@@ -1,20 +1,21 @@
-import Background from "../Background";
+// import Background from "../Background";
+
+import { colors } from "../colors";
 
 const Cover = () => (
   <>
-    <Background />
-    <h1
-      style={{
-        width: "100%",
-        textAlign: "center",
-        color: "#fff",
-        fontSize: "max(2rem, 6.5vw)",
-        marginTop: "-.25em",
-      }}
-      className="pos-center"
-    >
-      Svg with me
-    </h1>
+    {/* <Background /> */}
+    <div className="pos-center" style={{ textAlign: "center" }}>
+      <h1
+        style={{
+          width: "100%",
+          fontSize: "max(2rem, 6.5vw)",
+        }}
+      >
+        Svg with me
+      </h1>
+      <p style={{ fontSize: "3rem", color: colors.ltPurple }}>svgwithme.com</p>
+    </div>
   </>
 );
 

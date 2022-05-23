@@ -5,6 +5,7 @@ const Section = styled.section`
   min-height: max(100vh, 600px);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   ol,
   ul {
     margin-left: 0.75em;

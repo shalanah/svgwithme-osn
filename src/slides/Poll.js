@@ -10,18 +10,15 @@ const list = [
 
 const Poll = () => {
   return (
-    <>
-      <h1>Poll time 📊</h1>
-      <ul>
-        {list.map((item, i) => {
-          return (
-            <li className={"animateIn"} key={i}>
-              {item}
-            </li>
-          );
-        })}
-      </ul>
-    </>
+    <ul>
+      {list.map((item, i) => {
+        return (
+          <li className={"animateIn"} key={i}>
+            {item}
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

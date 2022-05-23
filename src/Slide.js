@@ -21,7 +21,12 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
     case "center":
       return (
         <Section ref={ref} id={id} onClick={onClick}>
-          <div className="layout-center">{content}</div>
+          <div className="layout-center">
+            <a href={`#${id}`} style={{ textDecoration: "none" }}>
+              <h1>{title}</h1>
+            </a>
+            {content}
+          </div>
         </Section>
       );
     case "codepen":
@@ -70,9 +75,9 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
                   gap: "7px 20px",
                 }}
               >
-                {links.map(({ text, href }) => {
+                {links.map(({ text, href }, i) => {
                   return (
-                    <a rel="noreferrer" target="_blank" href={href}>
+                    <a key={i} rel="noreferrer" target="_blank" href={href}>
                       {text}
                     </a>
                   );
@@ -88,9 +93,10 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
               }}
             >
               <Codepen
+                key={`${height}-${width}`}
                 hash={hash}
                 user="shalanah"
-                height={`${height}px`}
+                height={height}
                 editable
                 preview={false}
                 defaultTab={"html,result"}

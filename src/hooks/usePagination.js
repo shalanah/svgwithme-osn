@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import usePrevious from "./usePrevious";
-
-const clamp = (val, min, max) => Math.min(Math.max(Number(val), min), max);
+import { clamp } from "../lib";
+import useKeyUp from "./useKeyUp";
 
 const findSection = () => {
   const mid = window.innerHeight / 2;
@@ -10,15 +9,28 @@ const findSection = () => {
     const { top, height } = el.getBoundingClientRect();
     return top + height / 2;
   });
-  return mids.findIndex((v) => Math.abs(v - mid) < mid) || 0;
+  return (mids.findIndex((v) => Math.abs(v - mid) < mid) || 0) + 1;
 };
 
-const usePagination = (max) => {
-  const [section, setSection] = useState(0);
+const usePagination = (min, max) => {
+  const [section, setSection] = useState(min);
   const [btnScroll, setBtnScroll] = useState(false);
-  const prevBtnScroll = usePrevious(btnScroll);
 
-  // Update
+  const onPrev = () => {
+    if (btnScroll) return; // one at a time please, bc of scroll updating value too
+    setBtnScroll(true);
+    setSection((v) => clamp(v - 1, min, max));
+  };
+  const onNext = () => {
+    if (btnScroll) return;
+    setBtnScroll(true);
+    setSection((v) => clamp(v + 1, min, max));
+  };
+
+  useKeyUp("ArrowUp", onPrev);
+  useKeyUp("ArrowDown", onNext);
+
+  // Update slide number when scrolling to new section
   useEffect(() => {
     const onScroll = (e) => {
       if (!btnScroll) {
@@ -32,6 +44,7 @@ const usePagination = (max) => {
     };
   }, [section, btnScroll]);
 
+  // Undo btnScroll after we have arrived at location (done scrolling)
   useEffect(() => {
     let scrollTimeout;
     const onScroll = () => {
@@ -44,32 +57,25 @@ const usePagination = (max) => {
     };
     if (btnScroll) {
       onScroll();
-      const nextSlide = document.getElementsByTagName("section")[section];
+      const nextSlide = document.getElementsByTagName("section")[section - 1];
       nextSlide.scrollIntoView();
       window.addEventListener("scroll", onScroll);
     }
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      if (btnScroll) window.removeEventListener("scroll", onScroll);
     };
   }, [section, btnScroll]);
 
-  // useEffect(() => {
-  //   if (prevBtnScroll && !btnScroll) {
-  //     const index = findSection();
-  //     if (section !== index) setSection(index);
-  //   }
-  // }, [section, btnScroll, prevBtnScroll]);
-
+  // For number input
   const onInput = (e) => {
     const val = e.target.value;
     if (isNaN(val)) return;
-    else {
-      setBtnScroll(true);
-      setSection(() => clamp(Math.round(Number(val - 1)), 0, max));
-    }
+    if (btnScroll) return; // one at a time please, bc of scroll updating value too
+    setBtnScroll(true);
+    setSection(() => clamp(Math.round(Number(val)), min, max));
   };
 
-  return [section, setSection, setBtnScroll, onInput];
+  return [section, onInput, btnScroll, onPrev, onNext];
 };
 
 export default usePagination;

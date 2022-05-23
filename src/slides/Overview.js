@@ -1,7 +1,6 @@
 const Overview = () => {
   return (
     <>
-      <h1>Covering</h1>
       <ul>
         <li className="animateIn">
           Hand coding inline SVGs + rad things with them

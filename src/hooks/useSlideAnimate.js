@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { textIsSelected, isElDescendentOf } from "../lib";
 
 const useSlideAnimate = () => {
   const [clicks, setClick] = useState(0);
@@ -23,8 +24,11 @@ const useSlideAnimate = () => {
   }, [clicks]);
 
   // Update state if have classes to animate in
-  const onClick = maxAnimateIn
+  const onClick = !!maxAnimateIn
     ? (e) => {
+        // Exiting click if selecting text or clicked on an a-tag or button
+        if (isElDescendentOf(e.target, ["button", "a"]) || textIsSelected())
+          return;
         setClick((i) => Math.min(i + 1, maxAnimateIn));
       }
     : undefined;

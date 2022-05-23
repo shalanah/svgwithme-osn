@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Pagination max={slideLength - 1} />
+      <Pagination max={slideLength} />
       <Slides />
     </>
   );

@@ -10,9 +10,9 @@ import End from "./slides/End";
 const slides = [
   { content: <Cover />, layout: "none" },
   { content: <Intro />, layout: "none" },
-  { content: <Poll />, layout: "center" },
-  { content: <Overview />, layout: "center" },
-  { content: <Starting />, layout: "center" },
+  { content: <Poll />, title: "Poll Time 📊", layout: "center" },
+  { content: <Overview />, title: "Covering", layout: "center" },
+  { content: <Starting />, title: "Getting Started", layout: "center" },
   {
     hash: "QWQMOEa",
     title: "Viewport",
@@ -77,15 +77,15 @@ const slides = [
       { href: "https://codepen.io/bobannbg/pen/BZrXqz", text: "Gooey SVG" },
     ],
   },
-  { content: <Performance />, layout: "center" },
-  { content: <End />, layout: "center" },
+  { content: <Performance />, title: "Performance", layout: "center" },
+  { content: <End />, title: "Thank You!", layout: "center" },
 ];
 
 export const slideLength = slides.length;
 
 const Slides = () => {
   return slides.map(({ layout, ...props }, i) => {
-    return <Slide {...props} layout={layout} key={i} id={i} />;
+    return <Slide {...props} layout={layout} key={i} id={i + 1} />;
   });
 };
 

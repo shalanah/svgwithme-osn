@@ -4,7 +4,6 @@ import IconGithub from "../icons/IconGithub";
 const Starting = () => {
   return (
     <>
-      <h1>Getting started</h1>
       <p className="animateIn">
         Code along - svgwithme.com{" "}
         <IconContainer
