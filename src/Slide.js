@@ -93,7 +93,6 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
               }}
             >
               <Codepen
-                key={`${height}-${width}`}
                 hash={hash}
                 user="shalanah"
                 height={height}

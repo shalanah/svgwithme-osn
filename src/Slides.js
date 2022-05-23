@@ -15,7 +15,7 @@ const slides = [
   { content: <Starting />, title: "Getting Started", layout: "center" },
   {
     hash: "QWQMOEa",
-    title: "Viewport",
+    title: "viewBox",
     layout: "codepen",
     links: [{ href: "https://mapsvg.com/maps/world", text: "Map Source" }],
   },
@@ -51,6 +51,14 @@ const slides = [
     title: "Mask + clipPath",
     layout: "codepen",
     links: [
+      {
+        href: "https://codepen.io/noeldelgado/pen/ByxQjL",
+        text: "Xray Codepen",
+      },
+      {
+        href: "https://developer.mozilla.org/en-US/docs/Web/SVG/Element/radialGradient",
+        text: "MDN: radialGradient",
+      },
       {
         href: "https://codepen.io/yoksel/full/GRodvp",
         text: "CSS and SVG Masks",
