@@ -1,10 +1,10 @@
 import { IconContainer } from "./Intro";
 import IconGithub from "../icons/IconGithub";
 
-const Starting = () => {
+const Performance = () => {
   return (
     <>
-      <h1>Getting started</h1>
+      <h1>Performance</h1>
       <p className="animateIn">
         Code along - svgwithme.com{" "}
         <IconContainer
@@ -23,4 +23,4 @@ const Starting = () => {
   );
 };
 
-export default Starting;
+export default Performance;

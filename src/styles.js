@@ -79,7 +79,6 @@ export const GlobalStyles = createGlobalStyle`
 export const Section = styled.section`
   position: relative;
   min-height: max(100vh, 600px);
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   ol,

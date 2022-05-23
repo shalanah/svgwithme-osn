@@ -4,6 +4,8 @@ import Starting from "./slides/Starting";
 import Intro from "./slides/Intro";
 import Cover from "./slides/Cover";
 import Slide from "./Slide";
+import Performance from "./slides/Performance";
+import End from "./slides/End";
 
 const slides = [
   { content: <Cover />, layout: "none" },
@@ -75,6 +77,8 @@ const slides = [
       { href: "https://codepen.io/bobannbg/pen/BZrXqz", text: "Gooey SVG" },
     ],
   },
+  { content: <Performance />, layout: "center" },
+  { content: <End />, layout: "center" },
 ];
 
 export const slideLength = slides.length;
