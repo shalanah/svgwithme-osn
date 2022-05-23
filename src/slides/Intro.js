@@ -204,9 +204,7 @@ const Intro = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <IconGithub
-              style={{ width: "55%", transform: "translate(0%, 0%)" }}
-            />
+            <IconGithub style={{ width: "55%" }} />
           </IconContainer>
           <IconContainer
             href={"https://www.linkedin.com/in/shalanah/"}

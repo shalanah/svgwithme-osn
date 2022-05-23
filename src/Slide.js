@@ -8,8 +8,8 @@ import { colors } from "./colors";
 const pad = [40, 80, 20, 40];
 const Slide = ({ content, layout, id, title, hash, links = [] }) => {
   const dim = useWinSize();
-  const headerFontSize = dim.height * 0.04;
-  const header = Math.max(headerFontSize * 1.5, 20);
+  const headerFontSize = Math.max(dim.height * 0.04, 20);
+  const header = headerFontSize * 1.5;
   const [width, height, scale] = useCodepenSize([
     pad[0] + header,
     pad[1],
@@ -35,15 +35,6 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
           id={id}
           onClick={onClick}
         >
-          {/* <div
-            className="pos-full"
-            style={{
-              left: 0,
-              top: 0,
-              display: "fixed",
-              background: `linear-gradient(#111, ${colors.purple})`,
-            }}
-          /> */}
           <div style={{ position: "absolute", left: pad[3], top: pad[0] }}>
             <header
               style={{
@@ -63,7 +54,6 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
                     color: "#fff",
                     whiteSpace: "nowrap",
                     fontSize: headerFontSize,
-                    // textShadow: `-5px 5px ${colors.purple}`,
                   }}
                 >
                   {title}

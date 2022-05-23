@@ -12,9 +12,7 @@ const Performance = () => {
           target={"_blank"}
           href={"https://github.com/shalanah/svgwithme-osn"}
         >
-          <IconGithub
-            style={{ width: "55%", transform: "translate(0%, 0%)" }}
-          />
+          <IconGithub style={{ width: "55%" }} />
         </IconContainer>
       </p>
       <p className="animateIn">Pagination</p>
