@@ -1,4 +1,4 @@
-import { Section } from "./styles";
+import Section from "./Section";
 import Codepen from "react-codepen-embed";
 import useSlideAnimate from "./hooks/useSlideAnimate";
 import useCodepenSize from "./hooks/useCodepenSize";

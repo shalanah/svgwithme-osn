@@ -1,4 +1,4 @@
-import { GlobalStyles } from "./styles";
+import GlobalStyles from "./GlobalStyles";
 import Pagination from "./Pagination";
 import Slides, { slideLength } from "./Slides";
 

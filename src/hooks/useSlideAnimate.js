@@ -25,7 +25,6 @@ const useSlideAnimate = () => {
   // Update state if have classes to animate in
   const onClick = maxAnimateIn
     ? (e) => {
-        console.log(e.target);
         setClick((i) => Math.min(i + 1, maxAnimateIn));
       }
     : undefined;

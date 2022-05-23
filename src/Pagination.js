@@ -86,7 +86,6 @@ const Pagination = ({ max }) => {
       <Text
         key={section + 1}
         defaultValue={section + 1}
-        // value={section + 1}
         onKeyUp={(e) => {
           if (e.key === "Enter") onInput(e);
         }}
