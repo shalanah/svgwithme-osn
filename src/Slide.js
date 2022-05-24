@@ -5,7 +5,7 @@ import useCodepenSize from "./hooks/useCodepenSize";
 import useWinSize from "./hooks/useWinSize";
 import { colors } from "./colors";
 
-const pad = [40, 80, 20, 40];
+const pad = [40, 80, 20, 20];
 const Slide = ({ content, layout, id, title, hash, links = [] }) => {
   const dim = useWinSize();
   const headerFontSize = Math.max(dim.height * 0.04, 20);
@@ -18,29 +18,6 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
   ]);
   const [ref, onClick] = useSlideAnimate();
   switch (layout) {
-    case "center":
-      return (
-        <Section
-          ref={ref}
-          id={id}
-          onClick={onClick}
-          style={{
-            background: `url(/imgs/svg-you-and-me-bg.svg)`,
-            backgroundSize: "cover",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="layout-center">
-            <h1>
-              <a href={`#${id}`} style={{ textDecoration: "none" }}>
-                {title}
-              </a>
-            </h1>
-            {content}
-          </div>
-        </Section>
-      );
     case "codepen":
       return (
         <Section
@@ -120,16 +97,24 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
       return (
         <Section
           ref={ref}
-          onClick={onClick}
           id={id}
+          onClick={onClick}
           style={{
+            textAlign: layout === "none" ? "center" : "left",
             background: `url(/imgs/svg-you-and-me-bg.svg)`,
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
             backgroundPosition: "center",
           }}
         >
-          {content}
+          <div className="layout-center">
+            <h1>
+              <a href={`#${id}`} style={{ textDecoration: "none" }}>
+                {title}
+              </a>
+            </h1>
+            {content}
+          </div>
         </Section>
       );
   }

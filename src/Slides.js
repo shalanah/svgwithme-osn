@@ -8,7 +8,7 @@ import Performance from "./slides/Performance";
 import End from "./slides/End";
 
 const slides = [
-  { content: <Cover />, layout: "none" },
+  { content: <Cover />, title: "Svg with me", layout: "none" },
   {
     content: <Intro />,
     title: <span style={{ fontSize: ".8em" }}>Hi! I'm Shalanah!</span>,
