@@ -19,8 +19,7 @@ const Section = styled.section`
     transform: translateY(-2vh);
     font-size: 2.5rem;
     line-height: 1.4;
-    min-width: 75%;
-    max-width: calc(100% - 60px);
+    width: 75%;
     & *:first-child {
       margin-top: 0px;
     }

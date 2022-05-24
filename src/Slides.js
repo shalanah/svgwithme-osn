@@ -9,7 +9,7 @@ import End from "./slides/End";
 
 const slides = [
   { content: <Cover />, layout: "none" },
-  { content: <Intro />, layout: "none" },
+  { content: <Intro />, title: "Hi! I'm Shalanah!", layout: "center" },
   { content: <Poll />, title: "Poll Time 📊", layout: "center" },
   { content: <Overview />, title: "Covering", layout: "center" },
   { content: <Starting />, title: "Getting Started", layout: "center" },
