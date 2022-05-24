@@ -17,7 +17,7 @@ const Section = styled.section`
   .layout-center {
     margin: auto;
     transform: translateY(-2vh);
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     line-height: 1.4;
     width: 80%;
     @media screen and (max-width: 900px) {
