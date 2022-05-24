@@ -4,8 +4,8 @@ const list = [
   "Exported SVGs using software",
   "Created SVGs using software",
   "Edited SVG code in file/inline",
-  "Hand coded inline SVGs",
   "Animated SVGs",
+  "Hand coded inline SVGs",
 ];
 
 const Poll = () => {
