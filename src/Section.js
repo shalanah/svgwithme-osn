@@ -20,6 +20,14 @@ const Section = styled.section`
     font-size: 2.5rem;
     line-height: 1.4;
     width: 80%;
+    @media screen and (max-width: 1500px) {
+      width: 80%;
+      font-size: 2.25rem;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+      font-size: 2rem;
+    }
     @media screen and (max-width: 900px) {
       width: 90%;
       font-size: 1.5rem;
