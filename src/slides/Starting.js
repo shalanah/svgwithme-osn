@@ -7,7 +7,12 @@ const Starting = () => {
       <p className="animateIn">
         Code along - svgwithme.com - on Chrome or Firefox{" "}
         <IconContainer
-          style={{ display: "inline-flex", marginLeft: 8, width: "1em" }}
+          style={{
+            display: "inline-flex",
+            marginLeft: 8,
+            width: "1em",
+            height: "1em",
+          }}
           target={"_blank"}
           href={"https://github.com/shalanah/svgwithme-osn"}
         >
