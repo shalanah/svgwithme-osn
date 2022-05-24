@@ -99,9 +99,9 @@ const Intro = () => {
           </p>
         </div>
         <div className="animateIn">
-          <Category>Other</Category>
+          <Category>Other ❤️</Category>
           <p>
-            Love art, math, coding, watching{" "}
+            Watching{" "}
             <a
               href="https://www.youtube.com/c/Taskmaster"
               target={"_blank"}
@@ -109,8 +109,7 @@ const Intro = () => {
             >
               British panel shows
             </a>{" "}
-            with my husband, speaking German badly (watching Dark or Babylon
-            Berlin), and{" "}
+            with husband, learning German, and{" "}
             <a
               href="https://www.youtube.com/watch?v=jXegEec5dC8&t=1973s"
               target="_blank"
