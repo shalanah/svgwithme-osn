@@ -98,16 +98,16 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
               style={{
                 height,
                 width,
-                transform: `scale(${scale})`,
+                transform: `scale(${scale}) translateZ(0)`,
                 transformOrigin: "0 0",
               }}
             >
               <Codepen
+                preview={false}
                 hash={hash}
                 user="shalanah"
                 height={height}
                 editable
-                preview={false}
                 defaultTab={"html,result"}
               />
             </div>
