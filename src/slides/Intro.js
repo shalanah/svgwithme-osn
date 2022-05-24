@@ -1,6 +1,4 @@
-import { colors } from "../colors";
 import styled from "styled-components";
-import chroma from "chroma-js";
 import IconTwitter from "../icons/IconTwitter";
 import IconLinkedIn from "../icons/IconLinkedIn";
 import IconGithub from "../icons/IconGithub";
@@ -29,13 +27,6 @@ export const IconContainer = styled.a`
     transform: translate(-10px, 10px);
   }
 `;
-const Category = styled.div`
-  color: ${chroma(colors.teal).luminance(0.6)};
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  line-height: 1;
-`;
 
 const Container = styled.div`
   display: flex;
@@ -49,13 +40,11 @@ const Container = styled.div`
 const Intro = () => {
   return (
     <Container>
-      <div style={{ display: "flex", flexDirection: "column", gap: 26 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
         <div className="animateIn">
-          <Category>Live</Category>
           <p>Grew up in Chicagoland call TC my home</p>
         </div>
         <div className="animateIn">
-          <Category>Work</Category>
           <p>
             <a href="https://mathigon.org" rel="noreferrer" target={"_blank"}>
               Mathigon
@@ -75,7 +64,6 @@ const Intro = () => {
           </p>
         </div>
         <div className="animateIn">
-          <Category>Side Projects</Category>
           <p>
             <a
               href="https://spiralbetty.com"
@@ -99,7 +87,6 @@ const Intro = () => {
           </p>
         </div>
         <div className="animateIn">
-          <Category>Other ❤️</Category>
           <p>
             Watching{" "}
             <a

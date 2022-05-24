@@ -11,7 +11,7 @@ const slides = [
   { content: <Cover />, layout: "none" },
   {
     content: <Intro />,
-    title: <span style={{ fontSize: ".6em" }}>Hi! I'm Shalanah!</span>,
+    title: <span style={{ fontSize: ".8em" }}>Hi! I'm Shalanah!</span>,
     layout: "center",
   },
   { content: <Poll />, title: "Poll Time 📊", layout: "center" },
