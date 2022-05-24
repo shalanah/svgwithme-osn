@@ -3,7 +3,7 @@ const Cover = () => (
     <h1
       style={{
         width: "100%",
-        fontSize: "max(2rem, 6.5vw)",
+        fontSize: "max(3rem, 6.5vw)",
       }}
     >
       Svg with me

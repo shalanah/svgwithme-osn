@@ -44,9 +44,6 @@ const Container = styled.div`
   a {
     white-space: nowrap;
   }
-  p {
-    font-size: 2.2rem;
-  }
 `;
 
 const Intro = () => {
