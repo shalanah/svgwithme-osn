@@ -32,9 +32,11 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
           }}
         >
           <div className="layout-center">
-            <a href={`#${id}`} style={{ textDecoration: "none" }}>
-              <h1>{title}</h1>
-            </a>
+            <h1>
+              <a href={`#${id}`} style={{ textDecoration: "none" }}>
+                {title}
+              </a>
+            </h1>
             {content}
           </div>
         </Section>
@@ -63,17 +65,17 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
                 justifyContent: "space-between",
               }}
             >
-              <a href={`#${id}`} style={{ textDecoration: "none" }}>
-                <h1
-                  style={{
-                    color: "#fff",
-                    whiteSpace: "nowrap",
-                    fontSize: headerFontSize,
-                  }}
-                >
+              <h1
+                style={{
+                  color: "#fff",
+                  whiteSpace: "nowrap",
+                  fontSize: headerFontSize,
+                }}
+              >
+                <a href={`#${id}`} style={{ textDecoration: "none" }}>
                   {title}
-                </h1>
-              </a>
+                </a>
+              </h1>
               <div
                 style={{
                   justifyContent: "end",
