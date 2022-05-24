@@ -5,7 +5,7 @@ const Starting = () => {
   return (
     <>
       <p className="animateIn">
-        Code along - svgwithme.com{" "}
+        Code along - svgwithme.com - on Chrome or Firefox{" "}
         <IconContainer
           style={{ display: "inline-flex", marginLeft: 8 }}
           target={"_blank"}
