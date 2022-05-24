@@ -80,7 +80,7 @@ const slides = [
       },
       {
         href: "https://alistapart.com/article/finessing-fecolormatrix/",
-        text: "A List Apart: Finessing feColorMatrix",
+        text: "A List Apart: feColorMatrix",
       },
       {
         href: "https://codepen.io/lentilz/pen/KybBdg",
