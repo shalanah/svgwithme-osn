@@ -8,7 +8,10 @@ const Cover = () => (
     >
       Svg with me
     </h1>
-    <p style={{ fontSize: "3rem" }}>svgwithme.com</p>
+    <p style={{ fontSize: "2.5rem", lineHeight: 1.2 }}>
+      Svgwithme.com
+      <br /> Code along on Chrome or Firefox
+    </p>
   </div>
 );
 

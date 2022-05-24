@@ -3,10 +3,12 @@ import { colors } from "./colors";
 
 const fadeIn = keyframes`
   from {
+    pointer-events: none;
     opacity: 0;
     transform: translateY(5px);
   }
   to {
+    pointer-events: all;
     opacity: 1;
     transform: translateY(0%);
   }
