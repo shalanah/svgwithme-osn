@@ -8,7 +8,12 @@ import Performance from "./slides/Performance";
 import End from "./slides/End";
 
 const slides = [
-  { content: <Cover />, title: "Svg with me", layout: "none" },
+  {
+    content: <Cover />,
+    title: "Svg with me",
+    layout: "center",
+    style: { textAlign: "center" },
+  },
   {
     content: <Intro />,
     title: <span style={{ fontSize: ".8em" }}>Hi! I'm Shalanah!</span>,
@@ -96,8 +101,8 @@ const slides = [
 export const slideLength = slides.length;
 
 const Slides = () => {
-  return slides.map(({ layout, ...props }, i) => {
-    return <Slide {...props} layout={layout} key={i} id={i + 1} />;
+  return slides.map((props, i) => {
+    return <Slide {...props} key={i} id={i + 1} />;
   });
 };
 

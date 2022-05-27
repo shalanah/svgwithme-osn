@@ -2,6 +2,7 @@ import React from "react";
 import { colors } from "./colors";
 import { pickRandom, lerp } from "./lib";
 
+// Not used file... maybe later :)
 const getCircle = () => {
   return {
     type: "circle",

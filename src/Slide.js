@@ -6,7 +6,15 @@ import useWinSize from "./hooks/useWinSize";
 import { colors } from "./colors";
 
 const pad = [40, 80, 20, 20];
-const Slide = ({ content, layout, id, title, hash, links = [] }) => {
+const Slide = ({
+  content,
+  layout,
+  style = {},
+  id,
+  title,
+  hash,
+  links = [],
+}) => {
   const dim = useWinSize();
   const headerFontSize = Math.max(dim.height * 0.04, 20);
   const header = headerFontSize * 1.5;
@@ -100,11 +108,11 @@ const Slide = ({ content, layout, id, title, hash, links = [] }) => {
           id={id}
           onClick={onClick}
           style={{
-            textAlign: layout === "none" ? "center" : "left",
             background: `url(/imgs/svg-you-and-me-bg.svg)`,
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
             backgroundPosition: "center",
+            ...style,
           }}
         >
           <div className="layout-center">
