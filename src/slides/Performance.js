@@ -23,14 +23,6 @@ const Performance = () => {
       <p className="animateIn">
         Resources{" "}
         <a
-          href="https://jakearchibald.github.io/svgomg/"
-          target={"_blank"}
-          rel="noreferrer"
-        >
-          SVGOMG
-        </a>
-        ,{" "}
-        <a
           href="https://github.com/svg/svgo"
           target={"_blank"}
           rel="noreferrer"
@@ -38,8 +30,20 @@ const Performance = () => {
           SVGO
         </a>
         ,{" "}
+        <a
+          href="https://jakearchibald.github.io/svgomg/"
+          target={"_blank"}
+          rel="noreferrer"
+        >
+          SVGOMG
+        </a>
+        ,{" "}
         <a href="https://imageoptim.com/mac" target={"_blank"} rel="noreferrer">
           ImageOptim
+        </a>
+        ,{" "}
+        <a href="https://react-svgr.com/" target={"_blank"} rel="noreferrer">
+          SVGR
         </a>
       </p>
       <p className="animateIn">Illustrator has the best export reputation</p>

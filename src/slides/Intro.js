@@ -44,26 +44,7 @@ const Intro = () => {
         <div className="animateIn">
           <p>Grew up in Chicagoland call TC my home</p>
         </div>
-        <div className="animateIn">
-          <p>
-            <a href="https://mathigon.org" rel="noreferrer" target={"_blank"}>
-              Mathigon
-            </a>{" "}
-            (part of{" "}
-            <a href={"https://amplify.com"} rel="noreferrer" target={"_blank"}>
-              Amplify
-            </a>
-            ) on{" "}
-            <a
-              href={"https://mathigon.org/polypad"}
-              rel="noreferrer"
-              target={"_blank"}
-            >
-              Polypad
-            </a>
-          </p>
-        </div>
-        <div className="animateIn">
+        {/* <div className="animateIn">
           <p>
             <a
               href="https://spiralbetty.com"
@@ -85,7 +66,7 @@ const Intro = () => {
               Kind Cloud
             </a>
           </p>
-        </div>
+        </div> */}
         <div className="animateIn">
           <p>
             Watching{" "}
