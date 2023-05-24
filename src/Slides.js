@@ -14,11 +14,11 @@ const slides = [
     layout: "center",
     style: { textAlign: "center" },
   },
-  {
-    content: <Intro />,
-    title: <span style={{ fontSize: ".8em" }}>Hi! I'm Shalanah!</span>,
-    layout: "center",
-  },
+  // {
+  //   content: <Intro />,
+  //   title: <span style={{ fontSize: ".8em" }}>Hi! I'm Shalanah!</span>,
+  //   layout: "center",
+  // },
   { content: <Poll />, title: "Poll Time 📊", layout: "center" },
   { content: <Overview />, title: "Covering", layout: "center" },
   { content: <Starting />, title: "Getting Started", layout: "center" },
