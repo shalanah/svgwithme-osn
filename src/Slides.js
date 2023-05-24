@@ -19,7 +19,7 @@ const slides = [
   //   title: <span style={{ fontSize: ".8em" }}>Hi! I'm Shalanah!</span>,
   //   layout: "center",
   // },
-  { content: <Poll />, title: "Poll Time 📊", layout: "center" },
+  // { content: <Poll />, title: "Poll Time 📊", layout: "center" },
   { content: <Overview />, title: "Covering", layout: "center" },
   { content: <Starting />, title: "Getting Started", layout: "center" },
   {
