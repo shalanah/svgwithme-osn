@@ -6,7 +6,7 @@ const Overview = () => {
           Hand coding inline SVGs + rad things with them
         </li>
         <li className="animateIn">
-          Time permits talk about performance + minifying + questions
+          Briefly talk about performance + minifying + questions
         </li>
       </ul>
       <h2 className="animateIn">Won't be covering</h2>
