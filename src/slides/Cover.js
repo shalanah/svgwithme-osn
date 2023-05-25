@@ -1,6 +1,6 @@
 const Cover = () => (
   <p>
-    Svgwithme.com
+    svgwithme.com
     <br /> Code along on Chrome or Firefox
   </p>
 );
