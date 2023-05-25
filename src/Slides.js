@@ -8,20 +8,25 @@ import Performance from "./slides/Performance";
 import End from "./slides/End";
 
 const slides = [
-  {
-    content: <Cover />,
-    title: "Svg with me",
-    layout: "center",
-    style: { textAlign: "center" },
-  },
+  // {
+  //   content: <Cover />,
+  //   title: "Svg with me",
+  //   layout: "center",
+  //   style: { textAlign: "center" },
+  // },
   // {
   //   content: <Intro />,
   //   title: <span style={{ fontSize: ".8em" }}>Hi! I'm Shalanah!</span>,
   //   layout: "center",
   // },
   // { content: <Poll />, title: "Poll Time 📊", layout: "center" },
+  {
+    content: <Starting />,
+    title: "SVG with me",
+    layout: "center",
+    style: { textAlign: "center" },
+  },
   { content: <Overview />, title: "Covering", layout: "center" },
-  { content: <Starting />, title: "Getting Started", layout: "center" },
   {
     hash: "QWQMOEa",
     title: "viewBox",
